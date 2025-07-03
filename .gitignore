@@ -38,3 +38,9 @@ lerna-debug.log*
 !.elasticbeanstalk/*.global.yml
 
 .env
+
+.serverless/*
+
+*.js
+*.d.ts
+*.js.map

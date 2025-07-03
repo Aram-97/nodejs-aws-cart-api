@@ -29,6 +29,7 @@ export class CartService {
   }
 
   findOrCreateByUserId(userId: string): Cart {
+    console.log('GET /api/profile/cart', userId);
     const userCart = this.findByUserId(userId);
 
     if (userCart) {

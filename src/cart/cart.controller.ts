@@ -11,12 +11,13 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { BasicAuthGuard } from '../auth';
-import { Order, OrderService } from '../order';
-import { AppRequest, getUserIdFromRequest } from '../shared';
-import { calculateCartTotal } from './models-rules';
-import { CartService } from './services';
+import { OrderService } from '../order/services/order.service';
+import { Order } from '../order/models';
+import { CartService } from './services/cart.service';
 import { CartItem } from './models';
 import { CreateOrderDto, PutCartPayload } from 'src/order/type';
+import { AppRequest, getUserIdFromRequest } from '../shared';
+import { calculateCartTotal } from './models-rules';
 
 @Controller('api/profile/cart')
 export class CartController {

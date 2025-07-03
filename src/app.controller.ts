@@ -10,12 +10,12 @@ import {
 } from '@nestjs/common';
 import {
   LocalAuthGuard,
-  AuthService,
   // JwtAuthGuard,
   BasicAuthGuard,
 } from './auth';
-import { User } from './users';
 import { AppRequest } from './shared';
+import { User } from './users/models';
+import { AuthService } from './auth/auth.service';
 
 @Controller()
 export class AppController {
